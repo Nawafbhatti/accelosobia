@@ -1,0 +1,670 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html data-wf-domain="www.mindcure.com" data-wf-page="602735be176966441562615c" data-wf-site="602735be17696608f262615b"
+    lang="en">
+
+<head>
+    <style>
+            
+
+        .none {
+            display: none
+        }
+
+        .datainput {
+            position: relative;
+            margin: 5px 0 20px
+        }
+
+        .datainput p {
+            font-size: 12px;
+            background: #eee;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: .5rem
+        }
+
+        .whatsapp-form textarea {
+            min-height: 120px
+        }
+
+        .datainput select {
+            padding: 12px 0;
+            color: #555;
+            font-size: 14px;
+            width: 100%;
+            border: 0;
+            border-bottom: 1px solid #ddd;
+            outline: none;
+            background: #fff
+        }
+
+        .datainput input,
+        .datainput textarea {
+            font-size: 15px;
+            padding: 15px 0;
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ddd
+        }
+
+        .datainput input:focus,
+        .datainput textarea:focus {
+            outline: none
+        }
+
+        .datainput label {
+            color: #999;
+            font-size: 14px;
+            font-weight: 400;
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            top: 18px;
+            transition: .2s ease all
+        }
+
+        .datainput input:focus~label,
+        .datainput input:valid~label,
+        .datainput textarea:focus~label,
+        .datainput textarea:valid~label {
+            top: -10px;
+            font-size: 14px;
+            color: linear-gradient(130deg, #da1984, #00b2a9 49%)
+        }
+
+        #notif-license span {
+            font-size: 40px
+        }
+
+        #notif-license {
+            display: none;
+            position: fixed
+        }
+
+        .bar {
+            position: relative;
+            display: block;
+            width: 100%
+        }
+
+        .bar:before,
+        .bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            position: absolute;
+            background-image: linear-gradient(130deg, #da1984, #00b2a9 49%);
+            transition: .2s ease all
+        }
+
+        .bar:before {
+            left: 50%
+        }
+
+        .bar:after {
+            right: 50%
+        }
+
+        .datainput input:focus~.bar:before,
+        .datainput input:focus~.bar:after,
+        .datainput textarea:focus~.bar:before,
+        .datainput textarea:focus~.bar:after {
+            width: 50%
+        }
+
+        .indigox {
+            background: #3f51b5
+        }
+
+        .orangex {
+            background: #ff9800
+        }
+
+        .pinkx {
+            background: #e91e63
+        }
+
+        .bluex {
+            background: #2196F3
+        }
+
+        .purplex {
+            background: #9c27b0
+        }
+
+        .redx {
+            background: #F44336
+        }
+
+        .greenx {
+            background: #4CAF50
+        }
+
+        .highlight {
+            position: absolute;
+            height: 50%;
+            width: 100px;
+            top: 25%;
+            left: 0;
+            pointer-events: none;
+            opacity: .5
+        }
+
+        .datainput input:focus~.highlight,
+        .datainput textarea:focus~.highlight {
+            animation: inputHighlighter .3s ease
+        }
+
+        .datainput input:focus~label,
+        .datainput input:valid~label,
+        .datainput textarea:focus~label,
+        .datainput textarea:valid~label {
+            top: -10px;
+            font-size: 13px;
+            color: linear-gradient(130deg, #da1984, #00b2a9 49%);
+        }
+
+        form.whatsapp-form {
+            border-radius: .5rem;
+            padding: 20px;
+            box-sizing: border-box;
+            color: #444;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .whatsapp-form a.send_form {
+            color: #fff;
+            background-image: linear-gradient(130deg, #da1984, #00b2a9 49%);
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: .3rem;
+            font-weight: 700;
+            letter-spacing: .5px;
+            font-size: 15px;
+        }
+
+        #text-info span {
+            display: block;
+            padding: 10px 15px;
+            text-align: center;
+            font-weight: 700;
+            margin: 15px 0;
+            border-radius: .5rem;
+        }
+
+        #text-info span.yes {
+            background: #2A649C;
+            color: white;
+        }
+
+        #text-info span.no {
+            background: #ffc5c5;
+            color: #ce0404;
+        }
+    </style>
+    <script e:\vscode\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.htmlsrc='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+</style>
+    <meta charset="utf-8" />
+    <title>Accelsobio Health Inc. | Psychedelics Meet Technology</title>
+    <meta
+        content="MINDCURE develops psychedelic research, digital health tools, and medicines to optimize mental health care for clinicians and their clients. We offer a full cycle of wellness."
+        name="description" />
+    <meta content="MINDCURE Health Inc. | Psychedelics Meet Technology" property="og:title" />
+    <meta
+        content="MINDCURE develops psychedelic research, digital health tools, and medicines to optimize mental health care for clinicians and their clients. We offer a full cycle of wellness."
+        property="og:description" />
+    <meta
+        content="https://assets-global.website-files.com/602735be17696608f262615b/6098b652e70e2336d898bc79_og%20image.jpg"
+        property="og:image" />
+    <meta content="MINDCURE Health Inc. | Psychedelics Meet Technology" property="twitter:title" />
+    <meta
+        content="MINDCURE develops psychedelic research, digital health tools, and medicines to optimize mental health care for clinicians and their clients. We offer a full cycle of wellness."
+        property="twitter:description" />
+    <meta
+        content="https://assets-global.website-files.com/602735be17696608f262615b/6098b652e70e2336d898bc79_og%20image.jpg"
+        property="twitter:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://assets-global.website-files.com/602735be17696608f262615b/css/mindcure.598edcbf4.min.css"
+        rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">WebFont.load({ google: { families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Playfair Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic", "Montserrat Alternates:regular,500,700"] } });
+    </script>
+    <script
+        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/fav-icon.png">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="preconnect" href="https://thedigitalpanda.gitlab.io" />
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-PLFNQ2M');</script>
+
+</head>
+
+<body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="home">
+
+        <div data-collapse="medium" data-animation="over-right" data-duration="500" data-easing="ease-in-out"
+        data-easing2="ease-in-out" role="banner" class="navbar w-nav">
+        <div class="nav--container w-container"><a href="/"
+                id="w-node-_69443873-d189-7cd7-37e8-bd21a942c200-a942c1fe" aria-current="page"
+                class="nav--logo w-nav-brand w--current"><img src="{% static 'imgs/brand-logo.png' %}"   width="80px"
+                    loading="lazy" alt="" class="logo--image" />
+            </a>
+            <nav role="navigation" id="w-node-_69443873-d189-7cd7-37e8-bd21a942c202-a942c1fe"
+                class="nav--menu w-nav-menu"><a href="/" aria-current="page"
+                    class="nav--logo mobile w-inline-block w--current"><img src="{% static 'imgs/brand-logo.png' %}"
+                          width="80px" loading="lazy" alt="" />
+                    <div class="nav__help-text mobile">Mind Cure Health Inc.</div>
+                </a><a href="/" aria-current="page" class="nav--link w-inline-block w--current">
+                        <div class="nav--link__text">Home</div>
+                        <div class="nav--link__line"></div>
+                    </a>
+
+                    <a href="{% url 'work' %}" class="nav--link w-inline-block">
+                        <div class="nav--link__text">What We Do</div>
+                        <div class="nav--link__line"></div>
+                    </a>
+                    <a href="/our-products" class="nav--link hide w-inline-block">
+                        <div class="nav--link__text">Our Products</div>
+                        <div class="nav--link__line"></div>
+                    </a>
+                    <a href="{% url 'whoweare' %}" class="nav--link w-inline-block">
+                        <div class="nav--link__text">Who We Are</div>
+                        <div class="nav--link__line"></div>
+                    </a>
+                    <a href="{% url 'partnership' %}" class="nav--link w-inline-block">
+                        <div class="nav--link__text">Partnership</div>
+                        <div class="nav--link__line"></div>
+                    </a>
+                    <a href="{% url 'career' %}" class="nav--link w-inline-block">
+                        <div class="nav--link__text">Career</div>
+                        <div class="nav--link__line"></div>
+                    </a>
+                    <a href="{% url 'about' %}" class="nav--link w-inline-block">
+                        <div class="nav--link__text">About Us</div>
+                        <div class="nav--link__line"></div>
+                    </a>
+                <!-- <div data-hover="true" data-delay="0" class="dropdown--wrapper show--d w-dropdown">
+                    <div class="dropdown__toggle w-dropdown-toggle">
+                        <div class="dropdown__icon hide w-icon-dropdown-toggle"></div><a href="#"
+                            class="dropdown__link-text">About</a><img
+                            src="https://assets-global.website-files.com/602735be17696608f262615b/60817fd951372c4898f30b44_list-dots.svg"
+                            loading="lazy" alt="" class="dropdown--dots" />
+                    </div>
+                    <nav class="dropdown__list media w-dropdown-list">
+                        <a href="vision.html" class="nav--link w-inline-block">
+                            <div class="nav--link__text">Our Vision</div>
+                        </a>
+                        <a href="mission.html" class="nav--link w-inline-block">
+                            <div class="nav--link__text">Our Mission</div>
+                            <div class="nav--link__line"></div>
+                        </a>
+
+                        <a href="contact.html" class="nav--link w-inline-block">
+                            <div class="nav--link__text">Contact Us</div>
+                            <div class="nav--link__line"></div>
+                        </a>
+                    </nav>
+                </div> -->
+                <div class="social--wrapper m--navigation"><a href=" #"
+                        target="_blank" class="social--link w-inline-block"><img
+                            src="https://assets-global.website-files.com/602735be17696608f262615b/60366ac91b7b2422474e1388_tw.svg"
+                            loading="lazy" alt="" /></a><a href=" #"
+                        target="_blank" class="social--link w-inline-block"><img
+                            src="https://assets-global.website-files.com/602735be17696608f262615b/60366ac955905167e85a1633_fb.svg"
+                            loading="lazy" alt="" /></a><a href=" #"
+                        target="_blank" class="social--link w-inline-block"><img
+                            src="https://assets-global.website-files.com/602735be17696608f262615b/60366ac9278a3be5dc8fd5b8_li.svg"
+                            loading="lazy" alt="" /></a><a
+                        href=" #" target="_blank"
+                        class="social--link w-inline-block"><img
+                            src="https://assets-global.website-files.com/602735be17696608f262615b/6088779d7f3ed95c2055b081_insta.svg"
+                            loading="lazy" alt="" /></a><a
+                        href=" #" target="_blank"
+                        class="social--link w-inline-block"><img
+                            src="https://assets-global.website-files.com/602735be17696608f262615b/608b0f14e720d76e10e62810_youtubeicon.png"
+                            loading="lazy" alt="" /></a></div>
+            </nav>
+            <div id="w-node-_69443873-d189-7cd7-37e8-bd21a942c20f-a942c1fe"
+                data-w-id="69443873-d189-7cd7-37e8-bd21a942c20f" class="nav-menu--btn w-nav-button">
+                <div class="nav-menu--btn__line first"></div>
+                <div class="nav-menu--btn__line second"></div>
+                <div class="nav-menu--btn__line third"></div>
+            </div>
+            <!-- <div id="w-node-_00d66b3c-2952-8ba5-9380-2d317a75c707-a942c1fe"
+                class="w-node-_69443873-d189-7cd7-37e8-bd21a942c20f-a942c1fe">
+                <div class="stock-price-container">
+                    <div class="stock--price otcqx">$-.--<span class="stock--price__currency">USD</span></div>
+                    <div class="flex-horizontal align-center mobile-horizontal">
+                        <div class="stock--price__indicator hide"></div>
+                        <div class="nav__help-text">OTCQX: MCURF</div>
+                    </div>
+                </div>
+                <div class="stock-price-container">
+                    <div class="stock--price cse">$-.--<span class="stock--price__currency">CAD</span></div>
+                    <div class="flex-horizontal align-center mobile-horizontal">
+                        <div class="stock--price__indicator hide"></div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="nav__bkg small"></div>
+        <div class="navbar--banner">
+            <div class="flex--horizontal align--center container">
+                <p class="banner--copy small text--align__center m--space__10">Interested in investing in
+                    psychedelics? Learn more how MINDCURE’s innovations are at the forefront of the psychedelics
+                    industry.</p>
+                <div class="button symbol"><a href="/latest-deck" target="_blank"
+                        class="button--trigger nav--banner__button w-button">Download latest investor deck</a>
+                    <div class="button--text">Download latest investor deck</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div>
+            <div class="container">
+                <div class="row our_work_mobile_version">
+                    <div class="col-md-12">
+                        <h1 class="heading--section hero no--wrap mt-5">ACCELSOBIO</h1>
+                        <h3 class="lead--section">
+                            Just as we are rethinking the start-up process for clinical trials, we are rethinking
+                            today’s optimal work environment. Great people are the heart of the company, and we believe
+                            happy employees produce great results for clients and patients. At Accelsobio, we believe in
+                            the following: <br> <br>
+
+                            <strong>Doing Our Part to Save the Planet -</strong> Accelsobio employees are all home based. In today’s age
+                            of technical know-how, there is no reason for employees to drive into an office, burning
+                            fossil fuels and unnecessary electricity. <br> <br>
+                            <strong>Diversity -</strong> A diverse workforce creates the strongest team, and the clinical trials industry
+                            needs more diversity. We pride ourselves on looking for dedicated team members that include
+                            all races and nationalities of people. We are LGBTQ+ friendly and appreciate working
+                            mothers. <br> <br>
+
+                            <strong>Happy People are Productive, Dedicated Employees -</strong> Flexibility is important for managing
+                            every day challenges. At Accelsobio, we are open to flexible work schedules, including
+                            part-time, 4-day work weeks, and summer’s off. Got to pick your kids up every day from the
+                            car rider line or take Fido to the vet? We understand that having a career that allows you
+                            to put your family first, is critical to employee satisfaction. <br> <br>
+
+                            If you are interested in working at Accelsobio, send us your CV and a message detailing what
+                            you can bring to the team.
+
+                        </h3>
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs><clipPath id="__lottie_element_16"><rect width="1000" height="1000" x="0" y="0"></rect></clipPath><radialGradient id="__lottie_element_20" spreadMethod="pad" gradientUnits="userSpaceOnUse" cx="347.0369873046875" cy="-272.7820129394531" r="312.8104273629254" fx="347.0369873046875" fy="-272.7820129394531"><stop offset="0%" stop-color="rgb(254,219,0)"></stop><stop offset="21%" stop-color="rgb(236,122,66)"></stop><stop offset="41%" stop-color="rgb(218,25,132)"></stop><stop offset="71%" stop-color="rgb(154,17,134)"></stop><stop offset="100%" stop-color="rgb(90,8,136)"></stop></radialGradient><radialGradient id="__lottie_element_21" spreadMethod="pad" gradientUnits="userSpaceOnUse" cx="145.4510040283203" cy="-116.84100341796875" r="260.8297276633096" fx="145.4510040283203" fy="-116.84100341796875"><stop offset="0%" stop-color="rgb(254,219,0)"></stop><stop offset="21%" stop-color="rgb(236,122,66)"></stop><stop offset="41%" stop-color="rgb(218,25,132)"></stop><stop offset="71%" stop-color="rgb(154,17,134)"></stop><stop offset="100%" stop-color="rgb(90,8,136)"></stop></radialGradient><mask id="__lottie_element_22" mask-type="alpha"><g transform="matrix(0.478410005569458,0,0,0.478410005569458,115.50030517578125,364.11712646484375)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,289.114990234375,526.3179931640625)"><path fill="rgb(127,127,127)" fill-opacity="1" d=" M-198.3249969482422,86.00800323486328 C-198.3249969482422,85.29900360107422 -198.7949981689453,84.70600128173828 -199.44500732421875,84.53600311279297 C-209.36500549316406,56.14699935913086 -206.9949951171875,18.767000198364258 -204.90499877929688,-14.333000183105469 C-204.52499389648438,-20.37299919128418 -204.15499877929688,-26.072999954223633 -203.88499450683594,-31.562999725341797 C-202.14500427246094,-66.28299713134766 -202.64500427246094,-98.23300170898438 -205.35499572753906,-126.51300048828125 C-205.99600219726562,-133.26300048828125 -206.10499572753906,-140.56300354003906 -206.21499633789062,-148.29400634765625 C-206.36500549316406,-158.98300170898438 -206.52499389648438,-169.9219970703125 -208.1649932861328,-179.86199951171875 C-199.4149932861328,-162.6219940185547 -192.51499938964844,-145.1230010986328 -187.7259979248047,-127.87300109863281 C-176.9149932861328,-88.9219970703125 -176.64500427246094,-51.76300048828125 -186.9250030517578,-17.413999557495117 C-189.96499633789062,-7.254000186920166 -188.77499389648438,7.7769999504089355 -187.51499938964844,23.677000045776367 C-185.46499633789062,49.57699966430664 -183.34500122070312,76.3270034790039 -198.3249969482422,86.447998046875 C-198.3249969482422,86.447998046875 -198.3249969482422,86.00800323486328 -198.3249969482422,86.00800323486328z M-211.19500732421875,-191.9429931640625 C-211.26499938964844,-192.1439971923828 -211.34500122070312,-192.3419952392578 -211.40499877929688,-192.531005859375 C-211.5050048828125,-192.802001953125 -211.6750030517578,-193.0229949951172 -211.88499450683594,-193.1929931640625 C-218.90499877929688,-205.7030029296875 -226.86500549316406,-218.0019989013672 -235.68600463867188,-229.9219970703125 C-274.7250061035156,-282.6719970703125 -282.7449951171875,-336.6919860839844 -277.7550048828125,-366.9219970703125 C-273.9049987792969,-390.2619934082031 -262.5050048828125,-409.02301025390625 -243.86500549316406,-422.73199462890625 C-244.0449981689453,-419.5530090332031 -244.15499877929688,-416.302001953125 -244.19500732421875,-412.97198486328125 C-244.7050018310547,-375.1310119628906 -237.03500366210938,-334.61199951171875 -231.44500732421875,-305.0320129394531 C-230.81500244140625,-301.7120056152344 -230.21400451660156,-298.5419921875 -229.65499877929688,-295.5320129394531 C-226.9949951171875,-281.1709899902344 -223.18600463867188,-265.8819885253906 -219.49600219726562,-251.1020050048828 C-213.68499755859375,-227.82200622558594 -207.7050018310547,-203.81199645996094 -205.52499389648438,-181.281005859375 C-207.34500122070312,-184.8520050048828 -209.2259979248047,-188.4029998779297 -211.19500732421875,-191.9429931640625z M84.40499877929688,-486.2619934082031 C32.96500015258789,-499.3030090332031 -31.045000076293945,-515.5430297851562 -75.50499725341797,-515.9429931640625 C-76.61499786376953,-515.9530029296875 -77.7249984741211,-515.9630126953125 -78.83499908447266,-515.9929809570312 C-53.19499969482422,-520.9030151367188 -15.034000396728516,-524.5330200195312 6.195000171661377,-522.4530029296875 C22.735000610351562,-520.822998046875 43.6349983215332,-513.9329833984375 67.83499908447266,-505.9530029296875 C103.43499755859375,-494.2130126953125 143.46499633789062,-481.00201416015625 184.40499877929688,-479.322998046875 C183.94500732421875,-479.1619873046875 183.48500061035156,-479.00299072265625 183.03500366210938,-478.8429870605469 C172.9149932861328,-475.31298828125 163.35499572753906,-471.9830017089844 151.92599487304688,-471.8529968261719 C151.92599487304688,-471.8529968261719 151.63499450683594,-471.8529968261719 151.63499450683594,-471.8529968261719 C141.22500610351562,-471.8529968261719 116.11499786376953,-478.22198486328125 84.40499877929688,-486.2619934082031z M-87.31500244140625,-517.322998046875 C-87.81500244140625,-517.2139892578125 -88.19400024414062,-516.8519897460938 -88.375,-516.4119873046875 C-94.84500122070312,-516.77197265625 -101.43499755859375,-517.31298828125 -108.25499725341797,-517.8629760742188 C-142.2949981689453,-520.6129760742188 -177.5050048828125,-523.4719848632812 -207.13499450683594,-504.2919921875 C-228.625,-490.38299560546875 -240.86500549316406,-464.2929992675781 -243.61500549316406,-426.63299560546875 C-264.1050109863281,-412.3330078125 -276.5849914550781,-392.4219970703125 -280.7149963378906,-367.4429931640625 C-288.864990234375,-318.1520080566406 -262.8550109863281,-261.6130065917969 -238.10499572753906,-228.1719970703125 C-229.11500549316406,-216.02200317382812 -221.02499389648438,-203.48199462890625 -213.93499755859375,-190.73199462890625 C-209.65499877929688,-178.5709991455078 -209.4250030517578,-163.17300415039062 -209.21499633789062,-148.26300048828125 C-209.09500122070312,-140.46400451660156 -208.9949951171875,-133.1020050048828 -208.33599853515625,-126.24199676513672 C-205.63499450683594,-98.10199737548828 -205.14500427246094,-66.302001953125 -206.875,-31.722000122070312 C-207.15499877929688,-26.253000259399414 -207.51600646972656,-20.562000274658203 -207.89500427246094,-14.531999588012695 C-209.8249969482422,15.887999534606934 -211.98500061035156,49.88800048828125 -204.69500732421875,77.5979995727539 C-204.94500732421875,77.88800048828125 -205.0850067138672,78.27799987792969 -205.0449981689453,78.697998046875 C-204.6750030517578,82.68800354003906 -203.43499755859375,86.38899993896484 -201.3350067138672,89.71900177001953 C-201.1649932861328,111.99700164794922 -197.9550018310547,169.50799560546875 -184.63499450683594,314.75799560546875 C-182.10499572753906,342.2489929199219 -181.39500427246094,372.5780029296875 -180.64500427246094,404.68798828125 C-179.6750030517578,445.9580078125 -178.6750030517578,488.6369934082031 -173.48500061035156,524.7769775390625 C-173.38499450683594,525.5260009765625 -172.73500061035156,526.0679931640625 -172.0050048828125,526.0679931640625 C-172.0050048828125,526.0679931640625 -171.81500244140625,526.0679931640625 -171.81500244140625,526.0679931640625 C-170.9949951171875,525.947998046875 -170.4250030517578,525.18701171875 -170.5449981689453,524.3660278320312 C-175.71499633789062,488.3970031738281 -176.71499633789062,445.8169860839844 -177.6750030517578,404.63800048828125 C-178.43499755859375,372.4670104980469 -179.14500427246094,342.0880126953125 -181.6750030517578,314.49700927734375 C-194.94500732421875,169.8769989013672 -198.1750030517578,112.35800170898438 -198.36399841308594,89.97799682617188 C-180.11500549316406,79.6780014038086 -182.47500610351562,49.8390007019043 -184.56500244140625,23.447999954223633 C-185.7949981689453,7.828000068664551 -186.96499633789062,-6.922999858856201 -184.0850067138672,-16.54400062561035 C-173.64500427246094,-51.43299865722656 -173.90499877929688,-89.16200256347656 -184.875,-128.66200256347656 C-189.10499572753906,-143.89199829101562 -194.9550018310547,-159.32200622558594 -202.26499938964844,-174.593994140625 C-202.125,-174.83399963378906 -202.0540008544922,-175.1230010986328 -202.0749969482422,-175.4219970703125 C-203.68499755859375,-199.9320068359375 -210.2550048828125,-226.31300354003906 -216.61500549316406,-251.822998046875 C-220.28500366210938,-266.56298828125 -224.08599853515625,-281.81298828125 -226.73500061035156,-296.0830078125 C-227.2949981689453,-299.0929870605469 -227.89500427246094,-302.27301025390625 -228.52499389648438,-305.5929870605469 C-234.093994140625,-335.0539855957031 -241.7259979248047,-375.3919982910156 -241.22500610351562,-412.9320068359375 C-240.64500427246094,-456.9119873046875 -228.63499450683594,-486.7929992675781 -205.5449981689453,-501.7430114746094 C-176.76499938964844,-520.3729858398438 -142.0850067138672,-517.56298828125 -108.53500366210938,-514.843017578125 C-97.59500122070312,-513.9530029296875 -86.2750015258789,-513.0430297851562 -75.55500030517578,-512.9429931640625 C-31.454999923706055,-512.5430297851562 32.3650016784668,-496.3630065917969 83.6449966430664,-483.3529968261719 C115.56500244140625,-475.26300048828125 140.8350067138672,-468.8529968261719 151.625,-468.8529968261719 C151.625,-468.8529968261719 151.9340057373047,-468.8529968261719 151.9340057373047,-468.8529968261719 C163.86500549316406,-468.9930114746094 173.64500427246094,-472.4020080566406 184.0050048828125,-476.0119934082031 C187.05499267578125,-477.072998046875 190.2050018310547,-478.1730041503906 193.4550018310547,-479.2030029296875 C193.47500610351562,-479.2139892578125 193.4949951171875,-479.2139892578125 193.51499938964844,-479.2229919433594 C195.9149932861328,-479.9830017089844 199.375,-481.1619873046875 203.38499450683594,-482.5320129394531 C224.375,-489.7120056152344 272.4750061035156,-506.1719970703125 285.04400634765625,-499.9320068359375 C271.3349914550781,-485.4429931640625 241.34500122070312,-479.7229919433594 217.10499572753906,-475.1029968261719 C208.36500549316406,-473.4429931640625 200.10499572753906,-471.86199951171875 193.46499633789062,-470.0530090332031 C165.9250030517578,-462.5419921875 147.2949981689453,-443.9729919433594 127.57499694824219,-424.31298828125 C121.60399627685547,-418.3630065917969 115.43499755859375,-412.2130126953125 109.0250015258789,-406.42401123046875 C64.61499786376953,-366.322998046875 31.834999084472656,-331.1319885253906 5.855000019073486,-295.6719970703125 C-25.21500015258789,-253.2519989013672 -47.34400177001953,-209.2429962158203 -61.775001525878906,-161.13299560546875 C-67.92500305175781,-140.6529998779297 -70.75499725341797,-119.1520004272461 -73.48500061035156,-98.36199951171875 C-76.3550033569336,-76.54299926757812 -79.32499694824219,-53.981998443603516 -86.13500213623047,-32.672000885009766 C-94.55500030517578,-6.322000026702881 -105.30400085449219,19.70800018310547 -115.70500183105469,44.87799835205078 C-120.88500213623047,57.40800094604492 -126.24600219726562,70.37799835205078 -131.23500061035156,83.20700073242188 C-149.4250030517578,129.947998046875 -151.44500732421875,277.8680114746094 -147.4250030517578,327.7969970703125 C-144.51600646972656,364.01800537109375 -144.52499389648438,410.4880065917969 -144.52499389648438,447.8280029296875 C-144.52499389648438,471.7969970703125 -144.53500366210938,492.50799560546875 -143.81500244140625,506.0979919433594 C-143.76499938964844,506.9280090332031 -143.0749969482422,507.5459899902344 -142.23500061035156,507.5169982910156 C-141.40499877929688,507.4670104980469 -140.77499389648438,506.76800537109375 -140.81500244140625,505.93798828125 C-141.53500366210938,492.4169921875 -141.52499389648438,471.7590026855469 -141.52499389648438,447.8280029296875 C-141.51499938964844,410.43798828125 -141.51499938964844,363.8970031738281 -144.43600463867188,327.5570068359375 C-148.43499755859375,277.8269958496094 -146.47500610351562,130.63699340820312 -128.43499755859375,84.28700256347656 C-123.44499969482422,71.48699951171875 -118.09500122070312,58.52799987792969 -112.92500305175781,46.007999420166016 C-102.50499725341797,20.777999877929688 -91.7249984741211,-5.311999797821045 -83.2750015258789,-31.770999908447266 C-76.38500213623047,-53.34299850463867 -73.40499877929688,-76.03299713134766 -70.51499938964844,-97.98200225830078 C-67.79499816894531,-118.6520004272461 -64.98500061035156,-140.03199768066406 -58.904998779296875,-160.28199768066406 C-44.57500076293945,-208.06199645996094 -22.5939998626709,-251.77200317382812 8.274999618530273,-293.9119873046875 C34.125,-329.2019958496094 66.78500366210938,-364.25299072265625 111.03500366210938,-404.2030029296875 C117.50499725341797,-410.0429992675781 123.70500183105469,-416.2229919433594 129.69500732421875,-422.1929931640625 C149.125,-441.572998046875 167.47500610351562,-459.86199951171875 194.2550048828125,-467.1730041503906 C200.78500366210938,-468.9519958496094 208.9949951171875,-470.5119934082031 217.6750030517578,-472.1719970703125 C243.0749969482422,-477.0220031738281 274.68499755859375,-483.0419921875 288.4840087890625,-499.2820129394531 C288.7449951171875,-499.5920104980469 288.864990234375,-499.9830017089844 288.8340148925781,-500.3840026855469 C288.80499267578125,-500.7829895019531 288.614990234375,-501.1419982910156 288.30499267578125,-501.4020080566406 C278.3550109863281,-509.74200439453125 241.14500427246094,-498.6319885253906 202.4239959716797,-485.3919982910156 C198.5449981689453,-484.06201171875 195.1649932861328,-482.9119873046875 192.81500244140625,-482.1619873046875 C149.43499755859375,-482.2130126953125 106.58399963378906,-496.343994140625 68.77400207519531,-508.81298828125 C44.415000915527344,-516.85302734375 23.364999771118164,-523.7930297851562 6.494999885559082,-525.4530029296875 C2.2219998836517334,-525.875 -2.7209999561309814,-526.0679931640625 -8.107000350952148,-526.0679931640625 C-32.74599838256836,-526.0670166015625 -66.59400177001953,-522.0250244140625 -87.31500244140625,-517.322998046875z"></path></g></g></mask><radialGradient id="__lottie_element_28" spreadMethod="pad" gradientUnits="userSpaceOnUse" cx="22.43600082397461" cy="-457.2919921875" r="339.20787281014975" fx="22.43600082397461" fy="-457.2919921875"><stop offset="0%" stop-color="rgb(254,219,0)"></stop><stop offset="21%" stop-color="rgb(236,122,66)"></stop><stop offset="41%" stop-color="rgb(218,25,132)"></stop><stop offset="71%" stop-color="rgb(154,17,134)"></stop><stop offset="100%" stop-color="rgb(90,8,136)"></stop></radialGradient><radialGradient id="__lottie_element_29" spreadMethod="pad" gradientUnits="userSpaceOnUse" cx="-159.80099487304688" cy="-94.36699676513672" r="264.93411020463736" fx="-159.80099487304688" fy="-94.36699676513672"><stop offset="0%" stop-color="rgb(254,219,0)"></stop><stop offset="21%" stop-color="rgb(236,122,66)"></stop><stop offset="41%" stop-color="rgb(218,25,132)"></stop><stop offset="71%" stop-color="rgb(154,17,134)"></stop><stop offset="100%" stop-color="rgb(90,8,136)"></stop></radialGradient><mask id="__lottie_element_30" mask-type="alpha"><g transform="matrix(0.478410005569458,0,0,0.478410005569458,692.1781616210938,321.4591369628906)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,262.760009765625,565.0250244140625)"><path fill="rgb(127,127,127)" fill-opacity="1" d=" M-181.45799255371094,-123.48500061035156 C-181.45799255371094,-123.48500061035156 -182.5989990234375,-125.11499786376953 -182.5989990234375,-125.11499786376953 C-193.16799926757812,-140.2449951171875 -206.32899475097656,-159.0749969482422 -205.50900268554688,-177.3350067138672 C-205.0590057373047,-187.343994140625 -200.40899658203125,-196.72500610351562 -195.90899658203125,-205.7949981689453 C-193.0290069580078,-211.59500122070312 -190.0590057373047,-217.58399963378906 -188.218994140625,-223.6750030517578 C-179.5989990234375,-252.1649932861328 -201.47900390625,-276.614990234375 -220.78799438476562,-298.18499755859375 C-227.4290008544922,-305.5950012207031 -233.68899536132812,-312.5950012207031 -238.57899475097656,-319.4849853515625 C-262.510009765625,-353.2149963378906 -249.45899963378906,-373.864990234375 -226.12899780273438,-404.7049865722656 C-195.94900512695312,-371.4849853515625 -189.7790069580078,-307.7850036621094 -185.17999267578125,-260.32501220703125 C-184.35899353027344,-251.8350067138672 -183.57899475097656,-243.81500244140625 -182.72900390625,-236.58399963378906 C-178.95899963378906,-204.61500549316406 -173.99899291992188,-172.30499267578125 -169.197998046875,-141.0659942626953 C-167.3990020751953,-129.34500122070312 -165.53900146484375,-117.21499633789062 -163.75999450683594,-105.26499938964844 C-163.75999450683594,-105.24500274658203 -163.74899291992188,-105.22599792480469 -163.74899291992188,-105.20500183105469 C-170.32899475097656,-110.58399963378906 -176.40899658203125,-116.24400329589844 -181.45799255371094,-123.48500061035156z M259.5,-564.0150146484375 C257.4909973144531,-560.4650268554688 255.1999969482422,-557.4849853515625 252.67999267578125,-554.9650268554688 C252.22000122070312,-555.5250244140625 251.41000366210938,-555.6849975585938 250.7689971923828,-555.3049926757812 C238.781005859375,-548.2650146484375 225.75,-548.4249877929688 211.97000122070312,-548.5850219726562 C199.4199981689453,-548.7349853515625 186.42999267578125,-548.885009765625 174.5399932861328,-543.0050048828125 C165.52000427246094,-538.5449829101562 158.10000610351562,-531.9949951171875 150.9199981689453,-525.655029296875 C139.44000244140625,-515.5050048828125 128.5500030517578,-505.885009765625 112.16000366210938,-505.42498779296875 C102.55999755859375,-507.4549865722656 91.61100006103516,-510.3949890136719 79.46099853515625,-514.2050170898438 C67.3499984741211,-518.0050048828125 37.43000030517578,-524.85400390625 2.0810000896453857,-526.4249877929688 C-41.06999969482422,-528.344970703125 -77.87000274658203,-522.1749877929688 -107.28900146484375,-508.0950012207031 C-117.12999725341797,-503.385009765625 -128.22000122070312,-500.44500732421875 -138.94000244140625,-497.5950012207031 C-155.0989990234375,-493.30499267578125 -171.7989959716797,-488.864990234375 -184.6300048828125,-478.2959899902344 C-185.65899658203125,-477.43499755859375 -186.74899291992188,-476.5450134277344 -187.8800048828125,-475.6239929199219 C-206.6790008544922,-460.2349853515625 -235.07899475097656,-436.9849853515625 -234.27999877929688,-413.114990234375 C-234.27999877929688,-413.06500244140625 -234.27999877929688,-413.0150146484375 -234.2689971923828,-412.96600341796875 C-234.25,-412.81500244140625 -234.2100067138672,-412.6650085449219 -234.14999389648438,-412.5350036621094 C-234.06100463867188,-412.3349914550781 -233.9290008544922,-412.156005859375 -233.75,-412.0050048828125 C-233.75900268554688,-412.0050048828125 -233.75,-412.0050048828125 -233.75,-412.0050048828125 C-231.80999755859375,-410.4150085449219 -229.95899963378906,-408.7149963378906 -228.18899536132812,-406.9049987792969 C-228.2689971923828,-406.82501220703125 -228.3489990234375,-406.7449951171875 -228.41900634765625,-406.6549987792969 C-240.25999450683594,-391.0150146484375 -249.5800018310547,-377.9649963378906 -252.97999572753906,-364.31500244140625 C-256.718994140625,-349.31500244140625 -252.91900634765625,-334.5249938964844 -241.02999877929688,-317.7650146484375 C-236.0399932861328,-310.7349853515625 -229.718994140625,-303.67498779296875 -223.02999877929688,-296.19500732421875 C-203.33900451660156,-274.18499755859375 -182.968994140625,-251.4340057373047 -191.0989990234375,-224.55499267578125 C-192.86900329589844,-218.7050018310547 -195.64999389648438,-213.08399963378906 -198.60000610351562,-207.14500427246094 C-203.24000549316406,-197.79400634765625 -208.02999877929688,-188.125 -208.50999450683594,-177.48500061035156 C-209.3699951171875,-158.2050018310547 -195.32000732421875,-138.09500122070312 -185.05999755859375,-123.40499877929688 C-185.05999755859375,-123.40499877929688 -183.9199981689453,-121.7750015258789 -183.9199981689453,-121.7750015258789 C-179.14999389648438,-114.93499755859375 -173.3699951171875,-109.36499786376953 -167.33900451660156,-104.29399871826172 C-167.50900268554688,-103.93499755859375 -167.5399932861328,-103.50499725341797 -167.38999938964844,-103.1050033569336 C-159.6300048828125,-82.81500244140625 -156.86000061035156,-61.08399963378906 -154.1790008544922,-40.064998626708984 C-153.0500030517578,-31.174999237060547 -151.8699951171875,-21.985000610351562 -150.33999633789062,-13.024999618530273 C-146.87899780273438,7.175000190734863 -141.58900451660156,27.6560001373291 -136.47000122070312,47.45600128173828 C-133.66900634765625,58.28499984741211 -130.77000427246094,69.48500061035156 -128.23899841308594,80.41500091552734 C-122.58899688720703,104.84500122070312 -113.7490005493164,127.49500274658203 -105.20899963378906,149.406005859375 C-93.17900085449219,180.26499938964844 -81.81999969482422,209.4149932861328 -78.45999908447266,243.2449951171875 C-74.54900360107422,282.70599365234375 -80.69999694824219,342.19500732421875 -86.6500015258789,399.7349853515625 C-92.8499984741211,459.6940002441406 -99.25,521.6840209960938 -94.5989990234375,562.7340087890625 C-94.50900268554688,563.5549926757812 -93.76000213623047,564.155029296875 -92.94000244140625,564.0549926757812 C-92.12000274658203,563.9650268554688 -91.52999877929688,563.2150268554688 -91.61900329589844,562.39501953125 C-96.2300033569336,521.666015625 -89.83899688720703,459.83599853515625 -83.66000366210938,400.0450134277344 C-77.69999694824219,342.364990234375 -71.52999877929688,282.7149963378906 -75.47100067138672,242.9550018310547 C-78.86000061035156,208.71499633789062 -90.83000183105469,178.01499938964844 -102.40899658203125,148.3260040283203 C-110.91999816894531,126.52400207519531 -119.70899963378906,103.9749984741211 -125.31999969482422,79.75499725341797 C-127.87000274658203,68.78600311279297 -130.77000427246094,57.57500076293945 -133.57000732421875,46.724998474121094 C-138.6790008544922,26.983999252319336 -143.9499969482422,6.565000057220459 -147.39100646972656,-13.515999794006348 C-148.91000366210938,-22.405000686645508 -150.0800018310547,-31.565000534057617 -151.20899963378906,-40.42499923706055 C-153.77999877929688,-60.57500076293945 -156.4290008544922,-81.375 -163.45899963378906,-101.09500122070312 C-161.61000061035156,-99.61499786376953 -159.75900268554688,-98.16400146484375 -157.91000366210938,-96.7249984741211 C-150.24000549316406,-90.73500061035156 -142.3090057373047,-84.54499816894531 -135.74000549316406,-76.70500183105469 C-118.96900177001953,-56.69499969482422 -107.87000274658203,-27.434999465942383 -100.9800033569336,-7.173999786376953 C-92.54900360107422,17.645000457763672 -70.87999725341797,128.625 -76.50900268554688,148.0240020751953 C-76.73999786376953,148.8249969482422 -76.29000091552734,149.65499877929688 -75.48999786376953,149.88499450683594 C-74.69000244140625,150.11399841308594 -73.86000061035156,149.6649932861328 -73.62899780273438,148.86500549316406 C-67.71900177001953,128.5050048828125 -89.41999816894531,17.52400016784668 -98.13899993896484,-8.145000457763672 C-105.11000061035156,-28.635000228881836 -116.3499984741211,-58.23500061035156 -133.44000244140625,-78.63400268554688 C-140.218994140625,-86.7249984741211 -148.27999877929688,-93.01499938964844 -156.07000732421875,-99.09400177001953 C-158.1699981689453,-100.72599792480469 -160.22999572753906,-102.34500122070312 -162.25900268554688,-103.97599792480469 C-162.1999969482422,-103.97599792480469 -162.1300048828125,-103.98500061035156 -162.06900024414062,-103.99500274658203 C-161.25,-104.11499786376953 -160.69000244140625,-104.875 -160.80999755859375,-105.69499969482422 C-162.5800018310547,-117.65499877929688 -164.4499969482422,-129.78500366210938 -166.25,-141.51600646972656 C-171.0500030517578,-172.7259979248047 -176.00999450683594,-205.0050048828125 -179.7689971923828,-236.9250030517578 C-180.61900329589844,-244.13499450683594 -181.38900756835938,-252.13499450683594 -182.2100067138672,-260.6050109863281 C-187.1999969482422,-312.0849914550781 -194.00999450683594,-382.5050048828125 -231.32000732421875,-413.8559875488281 C-231.5,-436.0450134277344 -203.07000732421875,-459.32501220703125 -186.00999450683594,-473.2950134277344 C-184.87899780273438,-474.2250061035156 -183.78900146484375,-475.114990234375 -182.75,-475.9739990234375 C-170.42999267578125,-486.135009765625 -154.7689971923828,-490.2950134277344 -138.1999969482422,-494.69500732421875 C-127.3489990234375,-497.5849914550781 -116.12000274658203,-500.56500244140625 -106.02899932861328,-505.3949890136719 C-77.47000122070312,-519.0659790039062 -40.138999938964844,-525.3049926757812 1.909999966621399,-523.4349975585938 C36.95000076293945,-521.875 66.5510025024414,-515.1060180664062 78.52100372314453,-511.3450012207031 C87.58100128173828,-508.5050048828125 97.48999786376953,-505.67498779296875 107.20099639892578,-503.44500732421875 C107.4000015258789,-502.8949890136719 107.91100311279297,-502.4949951171875 108.53099822998047,-502.4649963378906 C109.66000366210938,-502.4150085449219 110.76100158691406,-502.4049987792969 111.83999633789062,-502.42498779296875 C130.4010009765625,-498.5249938964844 147.58099365234375,-497.2250061035156 155.8300018310547,-502.7149963378906 C156.52099609375,-503.17498779296875 156.71099853515625,-504.1050109863281 156.25100708007812,-504.7950134277344 C155.79100036621094,-505.4859924316406 154.86099243164062,-505.67498779296875 154.17100524902344,-505.21600341796875 C148.64100646972656,-501.53399658203125 137.4010009765625,-501.05499267578125 121.4010009765625,-503.67498779296875 C134.06100463867188,-506.7950134277344 143.58999633789062,-515.2050170898438 152.8699951171875,-523.405029296875 C159.9010009765625,-529.614990234375 167.16000366210938,-536.0349731445312 175.8300018310547,-540.3150024414062 C187.0800018310547,-545.8759765625 199.14100646972656,-545.7349853515625 211.9010009765625,-545.5850219726562 C223.36099243164062,-545.4550170898438 235.1300048828125,-545.3150024414062 246.16099548339844,-549.7349853515625 C236.4199981689453,-543.4249877929688 224.4199981689453,-541.405029296875 211.9709930419922,-539.3159790039062 C208.3699951171875,-538.7150268554688 204.6510009765625,-538.0850219726562 201.0399932861328,-537.35498046875 C178.8509979248047,-532.85498046875 167.3699951171875,-517.1749877929688 155.2209930419922,-500.57501220703125 C151.3300018310547,-495.2550048828125 147.31100463867188,-489.7650146484375 142.89100646972656,-484.635009765625 C134.7899932861328,-475.2149963378906 126.41000366210938,-465.7049865722656 118.31099700927734,-456.5050048828125 C68.57099914550781,-400.0050048828125 17.141000747680664,-341.58599853515625 -8.029000282287598,-266.6650085449219 C-32.36899948120117,-194.23500061035156 -24.079999923706055,-107.82499694824219 -17.420000076293945,-38.39500045776367 C-11.33899974822998,25.014999389648438 -17.89900016784668,83.08499908447266 -38.04899978637695,144.35499572753906 C-48.40800094604492,175.88499450683594 -67.1989974975586,520.5650024414062 -60.888999938964844,563.4550170898438 C-60.78900146484375,564.114013671875 -60.26900100708008,564.635009765625 -59.60900115966797,564.7249755859375 C-59.32899856567383,564.7550048828125 -59.069000244140625,564.7750244140625 -58.819000244140625,564.7750244140625 C-57.499000549316406,564.7750244140625 -56.62799835205078,564.2739868164062 -56.0989990234375,563.7949829101562 C-54.97999954223633,562.8049926757812 -54.45000076293945,561.1649780273438 -54.5,558.8049926757812 C-54.52000045776367,557.9749755859375 -55.17900085449219,557.3250122070312 -56.029998779296875,557.3350219726562 C-56.86000061035156,557.35498046875 -57.51900100708008,558.0360107421875 -57.499000549316406,558.864990234375 C-57.459999084472656,560.7949829101562 -57.900001525878906,561.3939819335938 -58.09000015258789,561.5640258789062 C-63.79899978637695,513.0640258789062 -45.388999938964844,176.35499572753906 -35.16899871826172,145.27499389648438 C-14.888999938964844,83.59500122070312 -8.288999557495117,25.135000228881836 -14.40999984741211,-38.69499969482422 C-21.038999557495117,-107.84500122070312 -29.290000915527344,-193.89500427246094 -5.159999847412109,-265.7250061035156 C19.820999145507812,-340.07501220703125 71.05000305175781,-398.2650146484375 120.58999633789062,-454.5350036621094 C128.7010040283203,-463.7449951171875 137.08099365234375,-473.2650146484375 145.1999969482422,-482.68499755859375 C149.6909942626953,-487.9049987792969 153.75,-493.4549865722656 157.67999267578125,-498.8160095214844 C169.4810028076172,-514.9349975585938 180.62100219726562,-530.155029296875 201.6699981689453,-534.4249877929688 C205.2310028076172,-535.14501953125 208.92999267578125,-535.7650146484375 212.50100708007812,-536.364990234375 C231.4010009765625,-539.5349731445312 250.94000244140625,-542.8250122070312 262.1099853515625,-562.5449829101562 C262.510009765625,-563.2650146484375 262.260009765625,-564.1749877929688 261.5409851074219,-564.5850219726562 C261.31201171875,-564.7139892578125 261.0610046386719,-564.7750244140625 260.81298828125,-564.7750244140625 C260.2909851074219,-564.7750244140625 259.77899169921875,-564.5029907226562 259.5,-564.0150146484375z"></path></g></g></mask><radialGradient id="__lottie_element_36" spreadMethod="pad" gradientUnits="userSpaceOnUse" cx="28.645000457763672" cy="-177.40699768066406" r="257.3158242104258" fx="28.645000457763672" fy="-177.40699768066406"><stop offset="0%" stop-color="rgb(254,219,0)"></stop><stop offset="21%" stop-color="rgb(236,122,66)"></stop><stop offset="41%" stop-color="rgb(218,25,132)"></stop><stop offset="71%" stop-color="rgb(154,17,134)"></stop><stop offset="100%" stop-color="rgb(90,8,136)"></stop></radialGradient><radialGradient id="__lottie_element_37" spreadMethod="pad" gradientUnits="userSpaceOnUse" cx="-3.6689999103546143" cy="-13.805000305175781" r="189.22685078878632" fx="-3.6689999103546143" fy="-13.805000305175781"><stop offset="0%" stop-color="rgb(254,219,0)"></stop><stop offset="21%" stop-color="rgb(236,122,66)"></stop><stop offset="41%" stop-color="rgb(218,25,132)"></stop><stop offset="71%" stop-color="rgb(154,17,134)"></stop><stop offset="100%" stop-color="rgb(90,8,136)"></stop></radialGradient><mask id="__lottie_element_38" mask-type="alpha"><g transform="matrix(0.478410005569458,0,0,0.478410005569458,454.85260009765625,177.36865234375)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,259.3089904785156,734.6740112304688)"><path fill="rgb(127,127,127)" fill-opacity="1" d=" M-209.52000427246094,-386.44500732421875 C-219.75,-362.2850036621094 -198.7790069580078,-342.1050109863281 -179.36900329589844,-327.2149963378906 C-179.0989990234375,-327.0050048828125 -178.77999877929688,-326.90399169921875 -178.4600067138672,-326.90399169921875 C-178.00999450683594,-326.90399169921875 -177.5590057373047,-327.1050109863281 -177.24899291992188,-327.4949951171875 C-176.74899291992188,-328.1449890136719 -176.8699951171875,-329.0950012207031 -177.52999877929688,-329.5950012207031 C-196.0800018310547,-343.82501220703125 -216.16900634765625,-363.0150146484375 -206.74899291992188,-385.2749938964844 C-206.4290008544922,-386.0450134277344 -206.7899932861328,-386.92498779296875 -207.5500030517578,-387.2449951171875 C-207.74099731445312,-387.3240051269531 -207.93800354003906,-387.36199951171875 -208.1320037841797,-387.36199951171875 C-208.7209930419922,-387.36199951171875 -209.2790069580078,-387.0159912109375 -209.52000427246094,-386.44500732421875z M-186.47000122070312,-307.0050048828125 C-195.14999389648438,-320.7550048828125 -208.2899932861328,-327.2539978027344 -221.00100708007812,-333.53399658203125 C-239.8000030517578,-342.8340148925781 -256.03900146484375,-350.8550109863281 -254.93899536132812,-380.05499267578125 C-254.37899780273438,-394.80499267578125 -249.17999267578125,-405.5849914550781 -243.66000366210938,-417.0050048828125 C-240.16000366210938,-424.2550048828125 -236.53900146484375,-431.7439880371094 -233.99899291992188,-440.54400634765625 C-227.69900512695312,-462.343994140625 -227.4080047607422,-486.4649963378906 -233.11900329589844,-512.2249755859375 C-233.57899475097656,-514.2639770507812 -234.2310028076172,-516.7349853515625 -234.99000549316406,-519.594970703125 C-239.32000732421875,-535.905029296875 -246.56100463867188,-563.1950073242188 -231.61000061035156,-571.135009765625 C-229.82000732421875,-572.0850219726562 -227.8800048828125,-572.5050048828125 -225.83999633789062,-572.5050048828125 C-216.10000610351562,-572.5050048828125 -204.32000732421875,-562.85498046875 -198.17999267578125,-555.4240112304688 C-197.76100158691406,-554.9240112304688 -197.10000610351562,-554.7639770507812 -196.52000427246094,-554.9650268554688 C-196.38999938964844,-554.5650024414062 -196.27000427246094,-554.155029296875 -196.14100646972656,-553.7550048828125 C-180.6699981689453,-504.42498779296875 -173.7899932861328,-452.92498779296875 -176.26100158691406,-404.8450012207031 C-178.39999389648438,-363.2049865722656 -172.73899841308594,-307.8450012207031 -168.3090057373047,-266.0849914550781 C-172.70899963378906,-280.8349914550781 -178.87100219726562,-294.9549865722656 -186.47000122070312,-307.0050048828125z M-52.48899841308594,-734.4240112304688 C-86.83799743652344,-734.4240112304688 -117.12899780273438,-726.14501953125 -140.1179962158203,-710.4550170898438 C-142.16900634765625,-709.0549926757812 -144.3800048828125,-707.5650024414062 -146.72000122070312,-705.9949951171875 C-175.91000366210938,-686.385009765625 -224.75,-653.5549926757812 -217.49000549316406,-616.7249755859375 C-214.91900634765625,-603.6649780273438 -209.75,-590.39501953125 -204.74899291992188,-577.5549926757812 C-202.49899291992188,-571.7650146484375 -200.19000244140625,-565.8350219726562 -198.14999389648438,-559.9849853515625 C-207.02000427246094,-569.4849853515625 -221.99000549316406,-579.60498046875 -232.9600067138672,-573.7750244140625 C-250.0189971923828,-564.7249755859375 -242.38900756835938,-535.9849853515625 -237.82899475097656,-518.8150024414062 C-237.07899475097656,-515.9849853515625 -236.42999267578125,-513.5449829101562 -235.99000549316406,-511.56500244140625 C-230.38999938964844,-486.2950134277344 -230.65899658203125,-462.67498779296875 -236.81900024414062,-441.364013671875 C-239.28799438476562,-432.81500244140625 -242.85000610351562,-425.43499755859375 -246.3000030517578,-418.30499267578125 C-251.9600067138672,-406.5950012207031 -257.29901123046875,-395.5350036621094 -257.8789978027344,-380.15399169921875 C-259.0589904785156,-349.0140075683594 -241.19000244140625,-340.1860046386719 -222.27000427246094,-330.8349914550781 C-209.94000244140625,-324.7349853515625 -197.1790008544922,-318.43499755859375 -188.94900512695312,-305.3949890136719 C-187.15899658203125,-302.55499267578125 -185.44900512695312,-299.5950012207031 -183.81900024414062,-296.5360107421875 C-183.8990020751953,-296.5450134277344 -183.97900390625,-296.5450134277344 -184.0590057373047,-296.5450134277344 C-184.87899780273438,-296.5050048828125 -185.5189971923828,-295.80499267578125 -185.47799682617188,-294.9750061035156 C-184.1179962158203,-267.7950134277344 -188.92999267578125,-240.69500732421875 -193.57899475097656,-214.47500610351562 C-199.8300018310547,-179.2449951171875 -206.3000030517578,-142.80499267578125 -198.27999877929688,-104.93599700927734 C-194.75999450683594,-88.32499694824219 -189.22900390625,-72.86499786376953 -183.88900756835938,-57.915000915527344 C-176.22900390625,-36.48500061035156 -168.98899841308594,-16.2549991607666 -166.97999572753906,7.394999980926514 C-162.9600067138672,54.625 -160.90899658203125,106.92500305175781 -160.88900756835938,162.8350067138672 C-160.86900329589844,217.46400451660156 -142.61900329589844,645.4349975585938 -133.44900512695312,676.5650024414062 C-133.218994140625,677.364990234375 -132.37899780273438,677.8159790039062 -131.58900451660156,677.5859985351562 C-130.8000030517578,677.3560180664062 -130.35000610351562,676.5159912109375 -130.57899475097656,675.7239990234375 C-139.11900329589844,646.7449951171875 -157.8800048828125,230.343994140625 -157.89999389648438,162.843994140625 C-157.9199981689453,106.8550033569336 -159.968994140625,54.4739990234375 -163.99899291992188,7.15500020980835 C-166.0489959716797,-16.885000228881836 -173.68800354003906,-38.24599838256836 -181.06900024414062,-58.904998779296875 C-186.37899780273438,-73.75499725341797 -191.8800048828125,-89.11499786376953 -195.35000610351562,-105.53500366210938 C-203.24000549316406,-142.8350067138672 -196.82899475097656,-178.97500610351562 -190.62899780273438,-213.9250030517578 C-186.0290069580078,-239.89500427246094 -181.25999450683594,-266.7460021972656 -182.42999267578125,-293.82598876953125 C-167.25999450683594,-263.8550109863281 -160.19000244140625,-225.39500427246094 -165.0500030517578,-195.96499633789062 C-166.33999633789062,-188.21499633789062 -168.16000366210938,-180.8249969482422 -169.92999267578125,-173.6750030517578 C-172.86900329589844,-161.78500366210938 -175.64999389648438,-150.55599975585938 -176.20899963378906,-137.6060028076172 C-176.82899475097656,-123.31500244140625 -177.9810028076172,-96.71499633789062 -187.0399932861328,-84.6449966430664 C-187.53900146484375,-83.98500061035156 -187.39999389648438,-83.04499816894531 -186.74000549316406,-82.54499816894531 C-186.0800018310547,-82.04499816894531 -185.13900756835938,-82.18499755859375 -184.63900756835938,-82.84500122070312 C-176.1790008544922,-94.1050033569336 -174.14999389648438,-115.75499725341797 -173.2100067138672,-137.47500610351562 C-172.6699981689453,-150.125 -169.9199981689453,-161.21499633789062 -167.02000427246094,-172.9550018310547 C-165.24000549316406,-180.16600036621094 -163.39999389648438,-187.60499572753906 -162.10000610351562,-195.48500061035156 C-158.91000366210938,-214.8350067138672 -160.75900268554688,-238.0050048828125 -166.61900329589844,-260.2049865722656 C-166.45899963378906,-260.1650085449219 -166.2989959716797,-260.15399169921875 -166.12899780273438,-260.17401123046875 C-165.3090057373047,-260.2650146484375 -164.7100067138672,-261.0050048828125 -164.8000030517578,-261.82501220703125 C-164.8000030517578,-261.82501220703125 -164.82899475097656,-262.0849914550781 -164.82899475097656,-262.0849914550781 C-169.2989959716797,-304.1860046386719 -175.4199981689453,-361.8340148925781 -173.22000122070312,-404.67401123046875 C-170.74000549316406,-453.114013671875 -177.66000366210938,-504.9649963378906 -193.24000549316406,-554.635009765625 C-195.72999572753906,-562.5650024414062 -198.91000366210938,-570.7449951171875 -201.99000549316406,-578.64501953125 C-206.94000244140625,-591.35498046875 -212.0590057373047,-604.5050048828125 -214.57899475097656,-617.3049926757812 C-221.45899963378906,-652.1749877929688 -173.6490020751953,-684.3049926757812 -145.07899475097656,-703.5050048828125 C-142.72900390625,-705.0850219726562 -140.51100158691406,-706.5759887695312 -138.4600067138672,-707.9749755859375 C-115.97000122070312,-723.3250122070312 -86.2699966430664,-731.4240112304688 -52.52000045776367,-731.4240112304688 C-52.52000045776367,-731.4240112304688 -51.709999084472656,-731.4240112304688 -51.709999084472656,-731.4240112304688 C-20.09000015258789,-731.3040161132812 13.10099983215332,-723.9450073242188 41.750999450683594,-710.6950073242188 C60.89099884033203,-701.844970703125 146.97999572753906,-680.4949951171875 182.0399932861328,-680.4949951171875 C182.0399932861328,-680.4949951171875 182.54200744628906,-680.4949951171875 182.54200744628906,-680.4949951171875 C185.92100524902344,-680.5150146484375 189.52999877929688,-680.5239868164062 193.30999755859375,-680.5339965820312 C211.49099731445312,-680.593017578125 234.11000061035156,-680.6640014648438 254.35000610351562,-681.7839965820312 C255.39999389648438,-681.85400390625 255.6199951171875,-680.9849853515625 255.6699981689453,-680.7249755859375 C255.71099853515625,-680.4650268554688 255.781005859375,-679.583984375 254.77099609375,-679.2839965820312 C226.37100219726562,-670.9140014648438 197.29200744628906,-660.9249877929688 176.8820037841797,-644.64501953125 C138.6909942626953,-614.1749877929688 106.16999816894531,-577.0650024414062 74.72000122070312,-541.1849975585938 C64.65899658203125,-529.7150268554688 54.27000045776367,-517.8560180664062 43.79999923706055,-506.3349914550781 C-12.920999526977539,-443.8949890136719 -45.71900177001953,-370.7860107421875 -65.87899780273438,-261.875 C-68.18000030517578,-249.44500732421875 -70.05000305175781,-236.8249969482422 -71.85900115966797,-224.625 C-74.91999816894531,-204.01499938964844 -78.0790023803711,-182.7050018310547 -83.36900329589844,-161.97500610351562 C-88.06900024414062,-143.5540008544922 -96.10900115966797,-128.81500244140625 -104.61900329589844,-113.20600128173828 C-107.51899719238281,-107.88500213623047 -110.51899719238281,-102.38500213623047 -113.43900299072266,-96.63500213623047 C-133.60899353027344,-56.88399887084961 -131.91900634765625,-20.95599937438965 -129.9600067138672,20.634000778198242 C-129.9600067138672,20.634000778198242 -129.74899291992188,25.22599983215332 -129.74899291992188,25.22599983215332 C-128.16000366210938,59.47700119018555 -128.32000732421875,97.44499969482422 -130.22000122070312,135.03500366210938 C-132.08999633789062,172.19500732421875 -129.218994140625,220.7449951171875 -126.4489974975586,267.68499755859375 C-124.37899780273438,302.625 -122.43099975585938,335.625 -122.43099975585938,362.9150085449219 C-122.43099975585938,415.3039855957031 -109.04000091552734,522.614990234375 -97.22000122070312,617.2949829101562 C-91.85099792480469,660.344970703125 -86.77999877929688,701.0059814453125 -83.38099670410156,733.0759887695312 C-83.3010025024414,733.8469848632812 -82.64900207519531,734.4149780273438 -81.88899993896484,734.4149780273438 C-81.83999633789062,734.4149780273438 -81.78900146484375,734.4149780273438 -81.66999816894531,734.4240112304688 C-80.8499984741211,734.3350219726562 -80.2490005493164,733.593994140625 -80.33999633789062,732.7750244140625 C-83.73999786376953,700.6740112304688 -88.80999755859375,660.0050048828125 -94.19100189208984,616.9359741210938 C-105.9990005493164,522.3460083007812 -119.37899780273438,415.125 -119.37899780273438,362.92498779296875 C-119.37899780273438,335.5450134277344 -121.33000183105469,302.4960021972656 -123.4000015258789,267.5159912109375 C-126.16899871826172,220.656005859375 -129.0290069580078,172.19500732421875 -127.16799926757812,135.19500732421875 C-125.26899719238281,97.51599884033203 -125.11000061035156,59.435001373291016 -126.6989974975586,25.094999313354492 C-126.6989974975586,25.094999313354492 -126.91000366210938,20.5049991607666 -126.91000366210938,20.5049991607666 C-128.85000610351562,-20.665000915527344 -130.52000427246094,-56.21500015258789 -110.70999908447266,-95.26499938964844 C-107.80999755859375,-100.9749984741211 -104.81900024414062,-106.46499633789062 -101.93099975585938,-111.76499938964844 C-93.33000183105469,-127.54499816894531 -85.1989974975586,-142.44500732421875 -80.41000366210938,-161.23500061035156 C-75.08000183105469,-182.11500549316406 -71.90899658203125,-203.5050048828125 -68.83799743652344,-224.18600463867188 C-67.02899932861328,-236.35499572753906 -65.15899658203125,-248.94500732421875 -62.86899948120117,-261.3349914550781 C-42.819000244140625,-369.6549987792969 -10.229999542236328,-442.31500244140625 46.09000015258789,-504.31500244140625 C56.569000244140625,-515.85498046875 66.98100280761719,-527.7249755859375 77.04199981689453,-539.2050170898438 C108.4000015258789,-574.9959716796875 140.83999633789062,-611.9959716796875 178.80999755859375,-642.3049926757812 C198.82000732421875,-658.2639770507812 227.5800018310547,-668.1240234375 255.67999267578125,-676.4039916992188 C257.8299865722656,-677.0440063476562 259.0589904785156,-679.0250244140625 258.67999267578125,-681.2349853515625 C258.29998779296875,-683.4450073242188 256.4700012207031,-684.89501953125 254.22999572753906,-684.7750244140625 C234.07000732421875,-683.6649780273438 211.49099731445312,-683.593994140625 193.34100341796875,-683.5339965820312 C189.55999755859375,-683.5239868164062 185.94000244140625,-683.5150146484375 182.5590057373047,-683.4949951171875 C148.94000244140625,-683.2750244140625 61.590999603271484,-704.8350219726562 43.04199981689453,-713.416015625 C14.01099967956543,-726.844970703125 -19.628999710083008,-734.3040161132812 -51.66999816894531,-734.4240112304688 C-51.66999816894531,-734.4240112304688 -52.48899841308594,-734.4240112304688 -52.48899841308594,-734.4240112304688z"></path></g></g></mask></defs><g clip-path="url(#__lottie_element_16)"><g mask="url(#__lottie_element_22)" style="display: block;"><g transform="matrix(0.6523600220680237,0,0,0.6523600220680237,182,603)" opacity="1"><g opacity="1" transform="matrix(2.2576193809509277,-1.4083623886108398,0.7893112301826477,1.2652740478515625,123.63800048828125,33.915000915527344)"><path fill="url(#__lottie_element_20)" fill-opacity="1" d=" M125,-172 C125,-172 125,172 125,172 C125,172 -125,172 -125,172 C-125,172 -125,-172 -125,-172 C-125,-172 125,-172 125,-172z"></path></g><g opacity="1" transform="matrix(3.337705135345459,0,0,2.3711130619049072,-56.85499954223633,-385.7430114746094)"><path fill="url(#__lottie_element_21)" fill-opacity="1" d=" M0,-113.5 C64.02040100097656,-113.5 116,-62.64065170288086 116,0 C116,62.64065170288086 64.02040100097656,113.5 0,113.5 C-64.02040100097656,113.5 -116,62.64065170288086 -116,0 C-116,-62.64065170288086 -64.02040100097656,-113.5 0,-113.5z"></path></g></g></g><g mask="url(#__lottie_element_30)" style="display: block;"><g transform="matrix(0.7271199822425842,0,0,0.7271199822425842,794,578)" opacity="1"><g opacity="1" transform="matrix(1.727489709854126,-1.756740689277649,1.2273178100585938,1.2068822383880615,98.26499938964844,71.7239990234375)"><path fill="url(#__lottie_element_28)" fill-opacity="1" d=" M125,-172 C125,-172 125,172 125,172 C125,172 -125,172 -125,172 C-125,172 -125,-172 -125,-172 C-125,-172 125,-172 125,-172z"></path></g><g opacity="1" transform="matrix(2.3323960304260254,0,0,2.34208607673645,-70.63600158691406,-340.2569885253906)"><path fill="url(#__lottie_element_29)" fill-opacity="1" d=" M0,-113.5 C64.02040100097656,-113.5 116,-62.64065170288086 116,0 C116,62.64065170288086 64.02040100097656,113.5 0,113.5 C-64.02040100097656,113.5 -116,62.64065170288086 -116,0 C-116,-62.64065170288086 -64.02040100097656,-113.5 0,-113.5z"></path></g></g></g><g mask="url(#__lottie_element_38)" style="display: block;"><g transform="matrix(1,0,0,1,500,500)" opacity="1"><g opacity="1" transform="matrix(1.9268438816070557,-1.6093780994415283,1.0689480304718018,1.2798086404800415,109.08522033691406,-28.765005111694336)"><path fill="url(#__lottie_element_36)" fill-opacity="1" d=" M125,-172 C125,-172 125,172 125,172 C125,172 -125,172 -125,172 C-125,172 -125,-172 -125,-172 C-125,-172 125,-172 125,-172z"></path></g><g opacity="1" transform="matrix(2.339203119277954,0,0,2.348921060562134,-17,-304.5)"><path fill="url(#__lottie_element_37)" fill-opacity="1" d=" M0,-113.5 C64.02040100097656,-113.5 116,-62.64065170288086 116,0 C116,62.64065170288086 64.02040100097656,113.5 0,113.5 C-64.02040100097656,113.5 -116,62.64065170288086 -116,0 C-116,-62.64065170288086 -64.02040100097656,-113.5 0,-113.5z"></path></g></g></g></g></svg>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <form class="whatsapp-form" method="POST">
+            {% csrf_token %}
+            <div class="datainput">
+                <input class="validate" id="wa_name" name="name" required="" type="text" value='' />
+                <span class="highlight"></span><span class="bar"></span>
+                <label>Your Name</label>
+            </div>
+            <div class="datainput">
+                <input class="validate" id="wa_email" name="email" required="" type="email" value='' />
+                <span class="highlight"></span><span class="bar"></span>
+                <label>Email Address</label>
+            </div>
+            <div class="datainput">
+                <textarea id='wa_textarea' placeholder='' name="note" maxlength='5000' row='1' required=""></textarea>
+                <span class="highlight"></span><span class="bar"></span>
+                <label>Description</label>
+            </div>
+            <button class="send_form" href="javascript:void" type="submit">Submit</button>
+        </form>
+        <div class="mt-5 footer wf-section">
+            <div class="cookie--wrapper">
+                <div class="cookie--content">
+                    <div class="cookie--content--left">
+                        <div class="text-block">By clicking &#x27;Accept Cookies&#x27;, you agree to the storing of
+                            cookies on your device to enhance site navigation, analyze site usage, and assist in our
+                            marketing efforts.</div>
+                    </div>
+                    <div id="w-node-f84a42e4-ceaf-fe25-82aa-422915a881a4-972bb8ae" class="cookie--btn--wrapper"><a
+                            id="btn-acceptCookies" href="#" class="button cookies w-inline-block">
+                            <div class="button__text">Accept Cookies</div>
+                            <div class="button__bkg"></div>
+                        </a></div>
+                </div>
+                <div class="w-embed">
+                    <style>
+                        .cookie--wrapper:not(.active) {
+                            pointer-events: none;
+                        }
+                    </style>
+                </div>
+            </div>
+            <div class="container z-index w-container">
+                <div class="grid--container footer--grid">
+                    <div id="w-node-d35b82d5-6435-2154-cd6a-41f8375ab1d9-972bb8ae" class="footer--column"><a href="#"
+                            class="footer--logo w-inline-block">
+                            <img  src="{% static 'imgs/brand-logo.png' %}" width="120px"
+                                loading="lazy" alt="" />
+                            </a>
+                        <h3 class="lead--section footer">We are Accelerating Solutions for Biotechs!</h3>
+                    </div>
+                    <div class="footer--column m--relative">
+                        <h6 class="footer--title">Contact</h6>
+                        <div class="emails--wrapper">
+                            <div class="contact--label bold margin">Accelsobio Health Inc.</div>
+                            <div class="contact--label bold">Head Office</div>
+                            <div class="contact--label">St. Cloud, FL</div><a
+                                href="http://info@accelsobio.com" class="contact--link">info@accelsobio.com</a><a
+                                href="http://info@accelsobio.com" class="contact--link"></a>
+                        </div>
+                        <div class="social--wrapper m--absolute hide"><a href=" #"
+                                target="_blank" class="social--link w-inline-block"><img
+                                    src="https://assets-global.website-files.com/602735be17696608f262615b/60366ac91b7b2422474e1388_tw.svg"
+                                    loading="lazy" alt="" /></a><a href=" #"
+                                target="_blank" class="social--link w-inline-block"><img
+                                    src="https://assets-global.website-files.com/602735be17696608f262615b/60366ac955905167e85a1633_fb.svg"
+                                    loading="lazy" alt="" /></a><a href=" #"
+                                target="_blank" class="social--link w-inline-block"><img
+                                    src="https://assets-global.website-files.com/602735be17696608f262615b/60366ac9278a3be5dc8fd5b8_li.svg"
+                                    loading="lazy" alt="" /></a><a href=" #"
+                                target="_blank" class="social--link w-inline-block"><img
+                                    src="https://assets-global.website-files.com/602735be17696608f262615b/6088779d7f3ed95c2055b081_insta.svg"
+                                    loading="lazy" alt="" /></a><a
+                                href=" #" target="_blank"
+                                class="social--link w-inline-block"><img
+                                    src="https://assets-global.website-files.com/602735be17696608f262615b/608b0f14e720d76e10e62810_youtubeicon.png"
+                                    loading="lazy" alt="" /></a></div>
+                    </div>
+                    <div id="w-node-_3a8db6e4-8766-ab5b-e767-ec68ee3392de-972bb8ae" class="footer--column">
+                        <h6 class="footer--title">Sitemap</h6>
+                        <div class="footer--menu w-row">
+                            <div class="footer--column w-col w-col-6">
+                                <a href="{% url 'whoweare' %}" class="footer--link w-inline-block">
+                                    <div>Our Team</div>
+                                </a>
+                                <a href="{% url 'partnership' %}" class="footer--link w-inline-block">
+                                    <div>Partnership</div>
+                                </a>
+                                <a href="{% url 'career' %}" aria-current="page"
+                                    class="footer--link w-inline-block w--current">
+                                    <div>Career</div>
+                                </a>
+                                <!-- <a href="{% url 'privacypolicy' %}">
+                                    <div class="footer--link w-inline-block w--current">Privacy And Policy</div>
+                                </a> -->
+                            </div>
+<!--                             <div class="footer--column w-col w-col-6"><a href="/media"
+                                    class="footer--link w-inline-block">
+                                    <div>Media</div>
+                                </a><a href="/blog" class="footer--link w-inline-block">
+                                    <div>Blog</div>
+                                </a><a href="/news" class="footer--link w-inline-block">
+                                    <div>News</div>
+                                </a><a href="/podcasts-old" class="footer--link hide w-inline-block">
+                                    <div>Podcast</div>
+                                </a><a href="/careers" class="footer--link hide w-inline-block">
+                                    <div>Careers</div>
+                                </a></div> -->
+                        </div>
+                         
+                    </div>
+                    <div class="footer--column form hide"><img
+                            src="https://assets-global.website-files.com/602735be17696608f262615b/6086ec7313f80b782cb3367a_footer--neuron.png"
+                            loading="lazy" alt="" class="bkg--image footer" />
+                        <div autocomplete="off" class="footer-form--wrapper w-form">
+                            <form id="wf-form-Footer-Subscribe-Form" name="wf-form-Footer-Subscribe-Form"
+                                data-name="Footer Subscribe Form" method="get" class="footer--form">
+                                <h2 class="footer__form--title">Stay in the loop</h2>
+                                <p>Subscribe to our newsletter to never miss an opportunity</p><input type="email"
+                                    class="input w-input" maxlength="256" name="Footer-Email" data-name="Footer Email"
+                                    placeholder="Type your email" id="Footer-Email" required="" />
+                                <div class="button symbol">
+                                    <div class="button__bkg"></div><input type="submit" value="Subscribe"
+                                        data-wait="Please wait..." class="button--trigger w-button" />
+                                    <div class="button--text">Subscribe</div>
+                                </div>
+                            </form>
+                            <div class="footer__success-form w-form-done">
+                                <div>Thank you!<br />Wait for news!</div>
+                            </div>
+                            <div class="w-form-fail">
+                                <div>Oops! Something went wrong while submitting the form.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copywrite--wrapper">
+                    <div class="copywrite--text">© 2022 ACCELSOBIO Health Inc. All rights reserved</div>
+                    <div><a href="#" class="copywrite--link w-inline-block">
+                            <div>Terms &amp; Conditions</div>
+                        </a><a href="{% url 'privacypolicy' %}" class="copywrite--link w-inline-block">
+                            <div>Privacy Policy</div>
+                        </a></div>
+                </div>
+            </div>
+            <div class="w-embed">
+                <style>
+                    :root {
+                        --container-width: 1200px;
+                        --container-padding: calc((100vw - var(--container-width)) / 2);
+                    }
+
+
+                    .blog--subnav__link {
+                        color: #000000 !important;
+                    }
+
+                    .blog--subnav__link:hover {
+                        color: #00b2a9 !important;
+                    }
+
+                    .copy.pop-up {
+                        -ms-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        -ms-line-clamp: 2;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        display: -webkit-box;
+                        display: box;
+                        word-wrap: break-word;
+                        -webkit-box-orient: vertical;
+                        box-orient: vertical;
+                    }
+
+
+                    @media (min-width: 991px) and (max-width: 1047px) {
+
+
+                        .container {
+                            max-width: 1000px;
+                        }
+
+                        .nav--container {
+                            max-width: 1000px;
+                        }
+
+                        .filter--selector {
+                            width: 120px;
+                        }
+
+                    }
+
+                    @media (max-width: 354px) {
+                        .contact--lead {
+                            font-size: 24px;
+                        }
+                    }
+
+                    .content--wrapper.partners::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    .content--wrapper.partners {
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                    }
+
+                    .columns--wrapper::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    .columns--wrapper {
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                    }
+                </style>
+            </div>
+        </div>
+    </main>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=602735be17696608f262615b"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script src="https://assets-global.website-files.com/602735be17696608f262615b/js/mindcure.bce822279.js"
+        type="text/javascript"></script>
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+    <!--LOADER-->
+    <div class="overlay">
+        <img src="https://assets-global.website-files.com/602735be17696608f262615b/60358c01ac6fe47749a881f8_white-logo.svg"
+            loading="lazy" alt="" class="transition--screen__logo" />
+        <video style="width:100%;height:100%;position:absolute;left:0;top:0;object-fit:cover;" poster="" autoplay muted
+            playsinline loop disableRemotePlayback>
+            <source src="https://dl.dropbox.com/s/expq5ed07k91b5p/mcur-transition_gradient-loop_1080.mp4?dl=0"
+                type="video/mp4;">
+        </video>
+    </div>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/rangeSelector.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.2/lottie.min.js" type="text/javascript"></script>
+    <script src="https://thedigitalpanda.gitlab.io/mindcure/brain_3d_bundle.min.js"></script>
+    <script src="https://thedigitalpanda.gitlab.io/mindcure/stock_price_fetcher_bundle.min.js"></script>
+    <script src="https://thedigitalpanda.gitlab.io/mindcure/stock_chart_bundle.min.js"></script>
+    <script src="https://thedigitalpanda.gitlab.io/mindcure/barba_bundle.min.js"></script>
+    <script src="https://thedigitalpanda.gitlab.io/panda-filter/bundle.min.js"></script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLFNQ2M" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- DO NOT REMOVE -->
+    <script>
+        window.initBarba();
+    </script>
+    <!-- DO NOT REMOVE -->
+</body>
+
+</html>
