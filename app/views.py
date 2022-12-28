@@ -3,10 +3,6 @@ from account.models import CONTACT, CAREER_DATA
 from threading import Thread
 from django.conf import settings
 from django.template.loader import render_to_string
-from django.contrib.sites.shortcuts import get_current_site
-from django.utils.encoding import force_bytes, force_str
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.core.mail import EmailMessage
 
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
@@ -36,7 +32,7 @@ def index(request):
 		create_contact.save()
 
 		user_mail = email
-		subject, from_email, to = "Accelsobio mindcure", settings.EMAIL_HOST_USER, user_mail
+		subject, from_email, to = "Accelsobio LLC", settings.EMAIL_HOST_USER, user_mail
 		html_content = render_to_string('accounts/email_confirmation.html')
 		text_content = strip_tags(html_content)
 		msg = EmailMultiAlternatives(subject, text_content, from_email, [to],)
